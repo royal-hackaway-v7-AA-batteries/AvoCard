@@ -33,17 +33,62 @@
         display: flex;
         flex-flow: column;
         justify-content: space-between;
-        & > #card-container {
-            //
-        }
         & > #account-info {
-            background: black;
+            background: #F4F4F4;
             height: 100%;
             margin: 1rem .5rem;
+            & > #balance-data {
+                background: #FAFAFA;
+                margin: .8rem;
+                & > #balance-container, #upcoming-container {
+                    padding: .2rem;
+                    padding-bottom: .5rem;
+                    & > div:nth-child(1) {  // titles
+                        font-weight: 500;
+                        color: black;
+                        margin: .8rem 1rem;
+                        font-size: .8rem;
+                    }
+                    & > div:nth-child(2) {
+                        color: black;
+                        // margin-left: .5rem;
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+                    & > #upcoming-fraction {
+                        gap: 5%;
+                        justify-content: center;
+                        text-align: center;
+                        display: flex;
+                        flex-flow: row;
+                        & > div:nth-child(1) {
+                            font-size: 2rem;
+                        }
+                        & > div:nth-child(2) {
+                            transform: translateY(.2rem);
+                            line-height: 3rem;
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+            & > #activity-summary {
+                color: black;
+                background: #FAFAFA;
+                margin: .8rem;
+                padding: .2rem;
+                padding-bottom: .8rem;
+                & > div:nth-child(1) {
+                    font-size: .8rem;
+                    margin: .8rem 1rem;
+                    font-weight: 500;
+                }
+
+            }
         }
     }
     #current-view {
-        background: red;
+        background: #EFEFEF;
         margin: .5rem;
         width: 70vw;
         padding: 1rem 2rem;

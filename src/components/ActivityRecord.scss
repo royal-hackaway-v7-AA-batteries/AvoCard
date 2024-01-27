@@ -1,0 +1,35 @@
+.activity-record {
+    display: flex;
+    flex-flow: row;
+    margin: .5rem;
+    & > #profile-picture {
+        background: gray;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        // display: inline-block;
+    }
+    & > #information {
+        width: 100%;
+        & > #textual-info {
+            margin-left: .5rem;
+            width: 100%;
+            & > #name {
+                font-size: .8rem;
+            }
+            #description {
+                font-size: .5rem;
+            }
+            #timestamp {
+                font-size: .5rem;
+                opacity: .7;
+            }
+        }
+        & > #balance-change {
+            font-weight: bold;
+            margin: 0 .5rem;
+            transform: translateY(.3rem);
+            font-size: .8rem;
+        }
+    }
+}
