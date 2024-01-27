@@ -45,6 +45,11 @@ const HomeLayout = () => {
                 balanceChange="+13"
               />
             </div>
+            <div id="send-receive">
+              <div>Send</div>
+              <div>|</div>
+              <div>Recieve</div>
+            </div>
           </div>
         </div>
         <div id="current-view">

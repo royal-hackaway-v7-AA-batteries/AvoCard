@@ -37,6 +37,28 @@
             background: #F4F4F4;
             height: 100%;
             // margin: .5rem;
+            #send-receive {
+                position: sticky;
+                border-radius: 2rem;
+                box-shadow: 0 0 .2rem black;
+                display: flex;
+                flex-flow: row;
+                background: #222;
+                justify-content: space-around;
+                padding: .1rem .5rem;
+                & > div:nth-child(1), & > div:nth-child(3) {
+                    text-align: center;
+                    width: 50%;
+                    flex-flow: column;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 100%;
+                }
+                & > div:nth-child(2) {
+                    font-size: 2rem;
+                }
+            }
             & > #balance-data {
                 background: #FAFAFA;
                 margin: .8rem;

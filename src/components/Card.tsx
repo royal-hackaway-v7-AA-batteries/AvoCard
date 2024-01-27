@@ -1,5 +1,6 @@
 import "./Card.scss";
 import currencyLogo from "../assets/currency.svg";
+import AvoCardLogo from "../assets/AvoCard_Logo_Light.svg";
 
 function Card({
   name,
@@ -26,7 +27,7 @@ function Card({
         </div>
       </div>
       <div className="flex flex-row justify-between">
-        <div id="card-branding">AvoCard</div>
+        <img id="avocard-logo" src={AvoCardLogo} draggable={false} />
         <div id="card-expiration">Exp {expiration}</div>
       </div>
     </div>

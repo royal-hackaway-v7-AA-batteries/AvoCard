@@ -14,6 +14,7 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    user-select: none;
     #card-name {
         font-weight: 400;
         // padding-left: 2rem;
@@ -45,6 +46,11 @@
     #card-branding {
         font-weight: bold;
         font-style: italic;
+    }
+    #avocard-logo {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
     }
     #card-expiration {
         font-weight: 300;
