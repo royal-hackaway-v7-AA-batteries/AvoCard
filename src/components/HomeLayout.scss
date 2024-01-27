@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+#avocard-branding {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem auto;
+    font-family: "Rock Salt", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    flex-flow: row;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    & > div:nth-child(2) {
+        font-size: 1.5rem;
+        margin-top: .5rem;
+    }
+}
+
+#home-container {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
+    #desktop-left {
+        background: rgba(255, 255, 255, .25);
+        border-radius: 2rem;
+        margin: 1rem;
+        width: calc(30vw - 2rem);
+    }
+    #current-view {
+        width: 70vw;
+        padding: 1rem 2rem;
+        & > #view-title {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+#navbar {
+    background: black;
+    border-radius: 2rem;
+    margin: 1rem;
+    border: .1rem solid white;
+    padding: .2rem .8rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 600;
+    position: sticky;
+    bottom: 0;
+    // left: 1%;
+    // right: 1%;
+    a {
+        padding: .2rem .5rem;
+        margin: .2rem;
+        border-radius: 1rem;
+        transition: all .2s ease-in-out;
+        &:hover {
+            background: rgba(255, 255, 255, .25);
+        }
+    }
+}
+
+@media screen {
+    
+}

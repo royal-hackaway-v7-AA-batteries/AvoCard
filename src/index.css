@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 :root {
-  background: #242424;
+  background: black;;
   color-scheme: light dark;
 }
 

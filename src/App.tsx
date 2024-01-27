@@ -1,9 +1,10 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "./App.scss";
-import Test1 from "./components/Test1";
-import Card from "./components/Card";
+// import Test1 from "./components/Test1";
+// import Card from "./components/Card";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import HomeLayout from "./components/HomeLayout";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFng4SlyrJ33txyWroBuYM5Cyu0ZyQ930",
@@ -43,8 +44,7 @@ function App() {
             path="/"
             element={
               <>
-                <Test1 />
-                <Outlet />
+                <HomeLayout />
               </>
             }
           >
