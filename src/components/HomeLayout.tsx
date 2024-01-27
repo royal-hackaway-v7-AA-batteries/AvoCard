@@ -7,11 +7,10 @@ const HomeLayout = () => {
     <>
       <div id="home-container">
         <div id="desktop-left">
-          <div id="avocard-branding">
-            <div>🥑</div>
-            <div>AvoCard</div>
+          <div id="card-container">
+            <Card />
           </div>
-          <Card />
+          <div id="account-info">Account Info</div>
         </div>
         <div id="current-view">
           <div id="view-title">View Title</div>
