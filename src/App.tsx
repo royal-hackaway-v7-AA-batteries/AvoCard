@@ -2,6 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "./App.scss";
 import Test1 from "./components/Test1";
+import Card from "./components/Card";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFng4SlyrJ33txyWroBuYM5Cyu0ZyQ930",
@@ -39,6 +40,7 @@ function App() {
       <h1 className="p-4 text-xl" id="test-sass">
         AvoCard
       </h1>
+      <Card />
     </>
   );
 }

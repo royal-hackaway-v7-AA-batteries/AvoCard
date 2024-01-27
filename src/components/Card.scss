@@ -1,0 +1,13 @@
+.card {
+    border-radius: 2rem;
+    padding: .5rem;
+    border: .1rem solid white;
+    box-shadow: 0 0 .5rem white;
+    margin: 0 auto;
+    height: 22vh;
+    width: 45vh;
+    background: linear-gradient(331deg, rgba(0,25,119,1) 0%, rgba(8,167,28,1) 35%, rgba(0,213,255,1) 100%);
+    & > .card-name {
+        font-weight: 800;
+    }
+}
