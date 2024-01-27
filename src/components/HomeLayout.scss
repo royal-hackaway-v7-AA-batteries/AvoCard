@@ -37,8 +37,16 @@
             background: #F4F4F4;
             height: 100%;
             // margin: .5rem;
+            display: flex;
+            flex-flow: column;
+            position: relative;
+            gap: .8rem;
+            padding: .8rem;
             #send-receive {
-                position: sticky;
+                position: fixed;
+                bottom: 0;
+                margin-bottom: 1rem;
+                width: calc(30vw - 4.5rem);
                 border-radius: 2rem;
                 box-shadow: 0 0 .2rem black;
                 display: flex;
@@ -61,7 +69,7 @@
             }
             & > #balance-data {
                 background: #FAFAFA;
-                margin: .8rem;
+                // margin: .8rem;
                 img {
                     display: inline-block;
                     transform: translateY(-.1rem);
@@ -102,9 +110,11 @@
             & > #activity-summary {
                 color: black;
                 background: #FAFAFA;
-                margin: .8rem;
+                // margin: .8rem;
+                // margin-bottom: 0;
                 padding: .2rem;
                 padding-bottom: .8rem;
+                height: 100%;
                 & > div:nth-child(1) {
                     font-size: .8rem;
                     margin: .8rem 1rem;
@@ -121,31 +131,42 @@
         padding: 1rem 2rem;
         & > #view-title {
             font-size: 2.2rem;
+            color: black;
         }
     }
 }
 
 #navbar {
-    background: black;
-    border-radius: 2rem;
+    background: #5D5D5D;
+    border-radius: 1.5rem;
     margin: 1rem;
     border: .1rem solid white;
-    padding: .2rem .8rem;
+    // padding: 1rem .8rem;
     display: flex;
     justify-content: space-evenly;
     font-weight: 600;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    left: 50%;
     // left: 1%;
     // right: 1%;
     a {
-        padding: .2rem .5rem;
-        margin: .2rem;
+        padding: 0 1.5rem;
+        margin: .4rem;
         border-radius: 1rem;
         transition: all .2s ease-in-out;
+        height: 5rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        // height: 100%;
+        font-weight: 400;
+        font-size: .8rem;
         &:hover {
-            background: rgba(255, 255, 255, .25);
         }
+    }
+    a#focused-tab {
+        background: #1A1A1A;
     }
 }
 

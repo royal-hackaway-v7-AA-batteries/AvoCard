@@ -3,8 +3,11 @@ import "./HomeLayout.scss";
 import Card from "./Card";
 import ActivityRecord from "./ActivityRecord";
 import currencyLogo from "../assets/currency.svg";
+import { useLocation } from "react-router-dom";
 
 const HomeLayout = () => {
+  const LOCATION = useLocation();
+
   return (
     <>
       <div id="home-container">
@@ -55,9 +58,17 @@ const HomeLayout = () => {
         <div id="current-view">
           <div id="view-title">View Title</div>
           <div id="navbar">
-            <a href="./">Home</a>
-            <a href="./dashboard">Dashboard</a>
-            <a href="./account">Account</a>
+            <a href="./" id={LOCATION.pathname === "/" ? "focused-tab" : ""}>
+              Market Place
+            </a>
+            <a
+              href="./treasure"
+              id={
+                LOCATION.pathname.startsWith("/treasure") ? "focused-tab" : ""
+              }
+            >
+              Treasure Chest
+            </a>
           </div>
           <Outlet />
         </div>

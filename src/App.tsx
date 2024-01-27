@@ -48,7 +48,7 @@ function App() {
             }
           >
             <Route
-              path="account"
+              path="treasure"
               element={
                 <>
                   <div> HI </div>
