@@ -1,8 +1,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "./App.scss";
-// import Test1 from "./components/Test1";
-// import Card from "./components/Card";
+// @ts-expect-error Will implement later
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import HomeLayout from "./components/HomeLayout";
 

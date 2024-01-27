@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./HomeLayout.scss";
 import Card from "./Card";
 import ActivityRecord from "./ActivityRecord";
+import currencyLogo from "../assets/currency.svg";
 
 const HomeLayout = () => {
   return (
@@ -20,7 +21,10 @@ const HomeLayout = () => {
             <div id="balance-data">
               <div id="balance-container">
                 <div>Balance</div>
-                <div>£{Intl.NumberFormat().format(1200)}</div>
+                <div>
+                  <img src={currencyLogo} />
+                  {Intl.NumberFormat().format(1200)}
+                </div>
               </div>
               <div id="upcoming-container">
                 <div>Upcoming / Due</div>
@@ -34,7 +38,12 @@ const HomeLayout = () => {
             </div>
             <div id="activity-summary">
               <div>Activity</div>
-              <ActivityRecord />
+              <ActivityRecord
+                name="Friend"
+                description="Breakfast errand"
+                timestamp="Today, 8:30 AM"
+                balanceChange="+13"
+              />
             </div>
           </div>
         </div>

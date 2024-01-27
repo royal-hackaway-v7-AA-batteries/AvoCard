@@ -1,4 +1,5 @@
 import "./Card.scss";
+import currencyLogo from "../assets/currency.svg";
 
 function Card({
   name,
@@ -19,7 +20,10 @@ function Card({
       </div>
       <div>
         <div id="card-balance-label">Balance</div>
-        <div id="card-balance">£{Intl.NumberFormat().format(balance)}</div>
+        <div id="card-balance">
+          <img src={currencyLogo} />
+          {Intl.NumberFormat().format(balance)}
+        </div>
       </div>
       <div className="flex flex-row justify-between">
         <div id="card-branding">AvoCard</div>
