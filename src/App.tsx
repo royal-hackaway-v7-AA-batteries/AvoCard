@@ -3,6 +3,7 @@ import "firebase/compat/firestore";
 import "./App.scss";
 import Test1 from "./components/Test1";
 import Card from "./components/Card";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFng4SlyrJ33txyWroBuYM5Cyu0ZyQ930",
@@ -36,11 +37,28 @@ query.onSnapshot(
 function App() {
   return (
     <>
-      <Test1 />
-      <h1 className="p-4 text-xl" id="test-sass">
-        AvoCard
-      </h1>
-      <Card />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Test1 />
+                <Outlet />
+              </>
+            }
+          >
+            <Route
+              path="account"
+              element={
+                <>
+                  <div> HI </div>
+                </>
+              }
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
