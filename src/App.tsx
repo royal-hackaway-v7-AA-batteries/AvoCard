@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeLayout from "./components/HomeLayout";
 import TreasureChest from "./pages/TreasureChest";
 import MarketPlace from "./pages/MarketPlace";
+import AvoCardLogoDark from "../public/assets/AvoCard_Logo_dark.svg";
 
 // import { useAuthState } from "react-firebase-hooks/auth";
 import {
@@ -16,6 +17,7 @@ import {
 
 import { useEffect, useState } from "react";
 import Button from "./components/Button";
+import { FaGoogle } from "react-icons/fa";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFng4SlyrJ33txyWroBuYM5Cyu0ZyQ930",
@@ -57,15 +59,26 @@ function App() {
 
   function LoginScreen() {
     return (
-      <div
-        id="login-screen"
-        style={{ display: !user ? "inline-block" : "none" }}
-      >
-        <h1 id="greeting">Welcome to AvoCard</h1>
-        <h4 id="">Let's get started!</h4>
-        <button id="google-login" onClick={signInWithGoogle}>
-          Sign In With Google
-        </button>
+      <div id="login-screen" style={{ height: !user ? "100vh" : "0" }}>
+        <div id="left-portion">
+          <h1>Welcome to AvoCard</h1>
+          <h4>Let's get started!</h4>
+          <button
+            id="google-login"
+            onClick={signInWithGoogle}
+            style={{ display: !user ? "inline-block" : "none" }}
+          >
+            <div className="items-center">
+              <FaGoogle style={{ marginRight: ".5rem" }} />
+              <div>Continue With Google</div>
+            </div>
+          </button>
+        </div>
+        <img
+          id="logo"
+          src={AvoCardLogoDark}
+          style={{ display: !user ? "inline-block" : "none" }}
+        />
       </div>
     );
   }
