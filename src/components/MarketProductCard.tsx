@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import CurrencyValue from "./CurrencyValue";
 
 const MarketProductCard = () => {
@@ -10,7 +9,6 @@ const MarketProductCard = () => {
     "Socks",
     "Phone accessories",
     "Chargers",
-    "T-shirt offers",
     "Legging choices",
     "Socks variety",
     "Smartphone covers",
@@ -50,7 +48,10 @@ const MarketProductCard = () => {
   return (
     <div className=" mb-3 flex break-inside-avoid flex-col gap-2 ">
       <div>
-        <img src="https://source.unsplash.com/random/?product" alt="" />
+        <img
+          src={`https://source.unsplash.com/random/?${productNames[Math.floor(Math.random() * productNames.length)].replace(/_/g, "+")}`}
+          alt=""
+        />
       </div>
       <div className=" flex w-full justify-between text-sm ">
         <p>{productNames[Math.floor(Math.random() * productNames.length)]}</p>
