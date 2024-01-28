@@ -1,3 +1,7 @@
+import MarketListing from "../components/MarketListing";
+import MarketProductCard from "../components/MarketProductCard";
+import MyListing from "../components/MyListing";
+import SearchField from "../components/SearchField";
 import "./MarketPlace.scss";
 
 function ItemListing() {
@@ -47,43 +51,12 @@ function MarketPlace() {
     "Colorful socks",
   ];
   return (
-    <div id="market-place">
-      <div id="search-container">
-        <input
-          type="search"
-          placeholder={
-            searchSuggestions[
-              Math.floor(Math.random() * searchSuggestions.length)
-            ]
-          }
-        />
-      </div>
-      <div id="listings-board">
-        <div className="listings-column">
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-        </div>
-        <div className="listings-column">
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-        </div>
-        <div className="listings-column">
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-          <ItemListing />
-        </div>
-      </div>
+    <div className=" flex h-full w-full flex-col items-center overflow-auto ">
+      <SearchField />
+
+      <MyListing />
+
+      <MarketListing />
     </div>
   );
 }
