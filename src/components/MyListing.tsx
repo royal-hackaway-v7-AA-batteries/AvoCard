@@ -3,7 +3,7 @@ import MyListCard from "./MyListCard";
 const MyListing = () => {
   return (
     <>
-      <div className=" flex w-full flex-col gap-4 ">
+      <div className=" flex w-full flex-col gap-2 ">
         <div className=" w-full ">
           <p>My listing</p>
         </div>
