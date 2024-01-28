@@ -1,28 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+import NavBarLink from "./NavBarLink";
 
 const NavBar = () => {
-  const { pathname } = useLocation();
-
   return (
-    <div className=" absolute left-0 top-0 h-full w-full ">
-      <div className="  ">
-        {/* <a href="./" id={LOCATION.pathname === "/" ? "focused-tab" : ""}>
-      Market Place
-    </a> */}
-        <Link to="/" id={pathname === "/" ? "focused-tab" : ""}>
-          Market Place
-        </Link>
-        <Link
-          id={pathname.startsWith("/treasure") ? "focused-tab" : ""}
-          to="treasure"
-        >
-          Treasure Chest
-        </Link>
-        {/* <a
-      href="./treasure"
-    >
-      Treasure Chest
-    </a> */}
+    <div className=" pointer-events-none absolute left-0 top-0 flex h-full w-full items-end justify-center p-2 ">
+      <div className=" pointer-events-auto flex gap-1 overflow-auto rounded-2xl bg-zinc-700 p-1 ">
+        <NavBarLink to="/" text="Market Place" />
+        <NavBarLink to="treasure" text="Treasure Chest" />
       </div>
     </div>
   );
