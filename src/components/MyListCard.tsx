@@ -11,7 +11,7 @@ const MyListCard = ({ product }: props) => {
       <div className=" flex items-center gap-2 ">
         <img
           src="https://source.unsplash.com/random/?object"
-          className=" h-20 w-40 object-cover "
+          className=" h-28 w-[25dvw] min-w-48 max-w-80 object-cover "
         />
         <div>
           <p>{product.name}</p>
