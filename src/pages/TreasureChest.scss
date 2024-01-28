@@ -1,33 +1,50 @@
+#treasure-chest {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    gap: 1rem;
+    overflow-y: scroll;
+    height: 90%;
+}
+
 .reward-card {
     background: white;
     color: black;
     display: flex;
     flex-flow: row;
-    width: 50%;
+    width: min(48%, 30rem);
     padding: .8rem;
     justify-content: space-between;
     .icon {
-        background: red;
-        width: 2rem;
+        // width: 3rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
     }
     .info-container {
-        width: 50%;
-        margin: 0 1rem;
+        width: 100%;
+        margin: .2rem .5rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
         & > .title {
             text-overflow: ellipsis;
         }
         & > .location {
             text-overflow: ellipsis;
-            font-size: .8rem;
+            font-size: .7rem;
         }
     }
     & > .price {
         background: black;
         color: white;
-        margin: auto 0;
-        padding: .2rem .5rem;
+        margin: auto .5rem;
+        padding: .2rem .8rem;
         display: flex;
         flex-flow: row;
+        min-width: fit-content;
         & > img {
             height: 1rem;
             transform: translateY(.25rem);

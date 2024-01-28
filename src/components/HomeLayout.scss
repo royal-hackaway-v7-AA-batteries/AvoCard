@@ -28,7 +28,7 @@
         background: rgba(255, 255, 255, .25);
         border-radius: 2rem;
         // margin: .5rem;
-        width: calc(30vw - 2rem);
+        width: max(calc(30vw - 2rem), 20rem);
         padding: .5rem;
         display: flex;
         flex-flow: column;
@@ -152,6 +152,7 @@
     left: 50%;
     // left: 1%;
     // right: 1%;
+    z-index: 99999;
     a {
         padding: 0 1.5rem;
         margin: .4rem;
