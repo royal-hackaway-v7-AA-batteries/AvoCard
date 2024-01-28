@@ -1,10 +1,13 @@
-import { Outlet } from "react-router-dom";
 import "./HomeLayout.scss";
 import Card from "./Card";
 import ActivityRecord from "./ActivityRecord";
 import currencyLogoDark from "../../public/assets/currency_dark.svg";
 import NavBar from "./NavBar";
 import ActionButton from "./ActionButton";
+import { Outlet } from "react-router-dom";
+// import "firebase/auth";
+
+// const auth = firebase.auth();
 
 const HomeLayout = () => {
   return (

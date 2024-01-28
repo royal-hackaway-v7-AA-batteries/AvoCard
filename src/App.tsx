@@ -5,6 +5,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeLayout from "./components/HomeLayout";
 import TreasureChest from "./pages/TreasureChest";
 import MarketPlace from "./pages/MarketPlace";
+import LoginPage from "./pages/LoginPage";
+
+// import { useAuthState } from "react-firebase-hooks/auth";
+import {
+  Auth,
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+
+import { useEffect, useState } from "react";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFng4SlyrJ33txyWroBuYM5Cyu0ZyQ930",
@@ -16,12 +27,16 @@ const firebaseConfig = {
   measurementId: "G-Y069PEEHGX",
 };
 
-firebase.initializeApp(firebaseConfig);
+const app: firebase.app.App = firebase.initializeApp(firebaseConfig);
+
 const db: firebase.firestore.Firestore = firebase.firestore();
 const collection: firebase.firestore.CollectionReference<firebase.firestore.DocumentData> =
   db.collection("ideas");
 const query: firebase.firestore.Query<firebase.firestore.DocumentData> =
   collection.orderBy("title");
+
+const auth: Auth = getAuth(app);
+const googleProvider: GoogleAuthProvider = new GoogleAuthProvider();
 
 // Fetch data in real-time
 query.onSnapshot(
@@ -36,19 +51,67 @@ query.onSnapshot(
 );
 
 function App() {
+  // const [USER] = useAuthState(auth);
+  const [user, setUser] = useState(() => auth.currentUser);
+  const [initalizing, setInitializing] = useState(true);
+
+  const signInWithGoogle = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch (error) {
+      console.error("Error signing in with Google");
+    }
+  };
+
+  const handleLogout = () => {
+    auth.signOut();
+  };
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+      if (initalizing) {
+        setInitializing(false);
+      }
+    });
+    // cleanup subscription
+    return unsubscribe;
+  }, [user, initalizing]);
+
   return (
     <>
+      <button
+        id="google-login"
+        onClick={signInWithGoogle}
+        style={{ display: !user ? "inline-block" : "hidden" }}
+      >
+        Sign In With Google
+      </button>
+      <button
+        id="logout"
+        onClick={handleLogout}
+        style={{ display: user ? "inline-block" : "hidden" }}
+      >
+        Log Out
+      </button>
+      <div className="text-black">Hello, {user?.displayName}</div>
+      {/* {user ? (
+        )} */}
       <BrowserRouter>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <HomeLayout />
+                {user ? <HomeLayout /> : <div className="text-black">test</div>}
               </>
             }
           >
-            <Route path="/" element={<MarketPlace />} />
+            <Route index element={<MarketPlace />} />
             <Route path="treasure" element={<TreasureChest />} />
           </Route>
         </Routes>
