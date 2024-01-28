@@ -4,10 +4,17 @@
     border: .2rem solid black;
     padding: .5rem .8rem;
     background: #CCC;
+    box-shadow: 0 0 .2rem black;
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 #google-login {
     //
+    background: white;
+    border: none;
 }
 
 #logout {
