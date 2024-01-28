@@ -46,9 +46,10 @@ const MarketProductCard = () => {
   // });
 
   return (
-    <div className=" mb-3 flex break-inside-avoid flex-col gap-2 ">
+    <div className=" flex break-inside-avoid flex-col gap-2 pb-3 ">
       <div>
         <img
+          loading="lazy"
           src={`https://source.unsplash.com/random/?${productNames[Math.floor(Math.random() * productNames.length)].replace(/_/g, "+")}`}
           alt=""
         />
