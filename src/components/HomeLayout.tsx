@@ -1,9 +1,10 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./HomeLayout.scss";
 import Card from "./Card";
 import ActivityRecord from "./ActivityRecord";
 import currencyLogoDark from "../../public/assets/currency_dark.svg";
 import { useLocation } from "react-router-dom";
+import NavBar from "./NavBar";
 
 const HomeLayout = () => {
   const LOCATION = useLocation();
@@ -55,23 +56,12 @@ const HomeLayout = () => {
             </div>
           </div>
         </div>
-        <div id="current-view">
+        <div id="current-view" className=" relative ">
           <div id="view-title">
             {LOCATION.pathname == "/" ? "Market Place" : "Treasure Chest"}
           </div>
-          <div id="navbar">
-            <a href="./" id={LOCATION.pathname === "/" ? "focused-tab" : ""}>
-              Market Place
-            </a>
-            <a
-              href="./treasure"
-              id={
-                LOCATION.pathname.startsWith("/treasure") ? "focused-tab" : ""
-              }
-            >
-              Treasure Chest
-            </a>
-          </div>
+
+          <NavBar />
           <Outlet />
         </div>
       </div>
