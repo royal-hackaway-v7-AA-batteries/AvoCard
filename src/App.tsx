@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeLayout from "./components/HomeLayout";
 import TreasureChest from "./pages/TreasureChest";
 import MarketPlace from "./pages/MarketPlace";
-import LoginPage from "./pages/LoginPage";
 
 // import { useAuthState } from "react-firebase-hooks/auth";
 import {
