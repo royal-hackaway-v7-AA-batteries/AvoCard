@@ -1,11 +1,15 @@
 import "./HomeLayout.scss";
 import Card from "./Card";
 import NavBar from "./NavBar";
-// import ActionButton from "./ActionButton";
+
 import { Outlet } from "react-router-dom";
 import AccountDetail from "./AccountDetail";
 
-const HomeLayout = () => {
+const HomeLayout = ({
+  children,
+}: {
+  children: JSX.Element | JSX.Element[];
+}) => {
   return (
     <>
       <div id="home-container">
@@ -17,6 +21,7 @@ const HomeLayout = () => {
               balance={3700}
               expiration="2028-02-23"
             />
+            {children}
           </div>
           <AccountDetail />
         </div>

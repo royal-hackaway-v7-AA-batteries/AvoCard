@@ -54,6 +54,21 @@ function App() {
   const [user, setUser] = useState(() => auth.currentUser);
   const [initalizing, setInitializing] = useState(true);
 
+  function LoginScreen() {
+    return (
+      <>
+        <button
+          id="google-login"
+          onClick={signInWithGoogle}
+          style={{ display: !user ? "inline-block" : "none" }}
+        >
+          Sign In With Google
+        </button>
+        <div className="text-black">Hello, {user?.displayName}</div>
+      </>
+    );
+  }
+
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
@@ -83,30 +98,28 @@ function App() {
 
   return (
     <>
-      <button
-        id="google-login"
-        onClick={signInWithGoogle}
-        style={{ display: !user ? "inline-block" : "hidden" }}
-      >
-        Sign In With Google
-      </button>
-      <button
-        id="logout"
-        onClick={handleLogout}
-        style={{ display: user ? "inline-block" : "hidden" }}
-      >
-        Log Out
-      </button>
-      <div className="text-black">Hello, {user?.displayName}</div>
-      {/* {user ? (
-        )} */}
+      <LoginScreen />
       <BrowserRouter>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                {user ? <HomeLayout /> : <div className="text-black">test</div>}
+                {user ? (
+                  <HomeLayout
+                    children={
+                      <button
+                        id="logout"
+                        onClick={handleLogout}
+                        style={{ display: user ? "inline-block" : "none" }}
+                      >
+                        Log Out
+                      </button>
+                    }
+                  />
+                ) : (
+                  <div className="text-black">test</div>
+                )}
               </>
             }
           >
