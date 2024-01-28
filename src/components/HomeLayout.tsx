@@ -9,7 +9,7 @@ const HomeLayout = () => {
   return (
     <>
       <div id="home-container">
-        <div id="desktop-left">
+        <div className=" min-w-72 max-w-80 " id="desktop-left">
           <div id="card-container">
             <Card
               name="Kenny Oliver"
