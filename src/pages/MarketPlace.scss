@@ -1,0 +1,41 @@
+#market-place {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    flex: 1 1 0;
+    height: 90%;
+    #search-container {
+        display: flex;
+        flex-flow: row;
+        input {
+            border-radius: 2rem;
+            background: #D8D8D8;
+            margin: 0 auto;
+            display: inline-block;
+            width: 80%;
+            padding: .2rem 1.5rem;
+        }
+    }
+    #listings-board {
+        display: flex;
+        // flex-flow: row;
+        // justify-content: space-between;
+        overflow-y: scroll;
+        // max-height: 100%;
+        // height: auto;
+        // height: 30rem;
+        height: 100%;
+        .listings-column {
+        }
+        .item-listing {
+            // width: 8rem;
+            // display: inline-block;
+            img {
+                // width: 8rem;
+            }
+        }
+    }
+}

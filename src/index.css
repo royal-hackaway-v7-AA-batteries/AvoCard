@@ -9,12 +9,6 @@
   font-family: "DM Sans", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-@layer components {
-  input {
-    @apply bg-blue-100 mx-auto block my-4 rounded-lg text-lg text-blue-600 py-0.5 pl-4;
-  }
-}
-
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

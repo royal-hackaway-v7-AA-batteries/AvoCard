@@ -137,7 +137,9 @@
 }
 
 #navbar {
-    background: #5D5D5D;
+    background: rgba(93, 93, 93, .8);
+    backdrop-filter: blur(1.5vw);
+    -webkit-backdrop-filter: blur(1.5vw);
     border-radius: 1.5rem;
     margin: 1rem;
     border: .1rem solid white;
@@ -162,11 +164,11 @@
         // height: 100%;
         font-weight: 400;
         font-size: .8rem;
-        &:hover {
-        }
+        // &:hover {
+        // }
     }
     a#focused-tab {
-        background: #1A1A1A;
+        background: rgba(26, 26, 26, .6);
     }
 }
 

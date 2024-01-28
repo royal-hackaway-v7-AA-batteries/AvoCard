@@ -1,9 +1,10 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "./App.scss";
-// @ts-expect-error Will implement later
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeLayout from "./components/HomeLayout";
+import TreasureChest from "./pages/TreasureChest";
+import MarketPlace from "./pages/MarketPlace";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFng4SlyrJ33txyWroBuYM5Cyu0ZyQ930",
@@ -47,14 +48,8 @@ function App() {
               </>
             }
           >
-            <Route
-              path="treasure"
-              element={
-                <>
-                  <div> HI </div>
-                </>
-              }
-            />
+            <Route path="/" element={<MarketPlace />} />
+            <Route path="treasure" element={<TreasureChest />} />
           </Route>
         </Routes>
       </BrowserRouter>

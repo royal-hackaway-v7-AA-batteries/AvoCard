@@ -56,7 +56,9 @@ const HomeLayout = () => {
           </div>
         </div>
         <div id="current-view">
-          <div id="view-title">View Title</div>
+          <div id="view-title">
+            {LOCATION.pathname == "/" ? "Market Place" : "Treasure Chest"}
+          </div>
           <div id="navbar">
             <a href="./" id={LOCATION.pathname === "/" ? "focused-tab" : ""}>
               Market Place
