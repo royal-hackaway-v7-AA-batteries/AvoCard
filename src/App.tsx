@@ -74,7 +74,11 @@ function App() {
             </div>
           </button>
         </div>
-        <img id="logo" src={AvoCardLogoDark} />
+        <img
+          id="logo"
+          src={AvoCardLogoDark}
+          style={{ display: !user ? "inline-block" : "none" }}
+        />
       </div>
     );
   }
