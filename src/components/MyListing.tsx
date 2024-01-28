@@ -1,11 +1,12 @@
 import MyListCard from "./MyListCard";
+import SectionTitle from "./SectionTitle";
 
 const MyListing = () => {
   return (
     <>
       <div className=" flex w-full flex-col gap-2 ">
         <div className=" w-full ">
-          <p>My listing</p>
+          <SectionTitle text="My Listing" />
         </div>
         <div className=" flex w-full flex-col gap-2  ">
           {[
