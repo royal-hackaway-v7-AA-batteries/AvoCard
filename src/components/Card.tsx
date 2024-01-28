@@ -14,7 +14,7 @@ function Card({
   expiration: string;
 }) {
   return (
-    <div className="card">
+    <div className="card text-gray-50 ">
       <div>
         <div id="card-name">{name}</div>
         <div id="card-issuer">Issued by {issuer}</div>
