@@ -1,15 +1,12 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./HomeLayout.scss";
 import Card from "./Card";
 import ActivityRecord from "./ActivityRecord";
 import currencyLogoDark from "../../public/assets/currency_dark.svg";
-import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
 import ActionButton from "./ActionButton";
 
 const HomeLayout = () => {
-  const LOCATION = useLocation();
-
   return (
     <>
       <div id="home-container">
@@ -59,12 +56,13 @@ const HomeLayout = () => {
           </div>
         </div>
         <div id="current-view" className=" relative ">
-          <div id="view-title">
-            {LOCATION.pathname == "/" ? "Market Place" : "Treasure Chest"}
-          </div>
-
           <NavBar />
-          <Outlet />
+          <div className=" relative h-full w-full overflow-y-auto pb-20 ">
+            {/* <h1 className=" font-bold ">
+              {LOCATION.pathname == "/" ? "Market Place" : "Treasure Chest"}
+            </h1> */}
+            <Outlet />
+          </div>
         </div>
       </div>
     </>

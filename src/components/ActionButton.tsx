@@ -11,9 +11,11 @@ const ActionButton = ({ content = [""] }: props) => {
         {content.map((i, index) => {
           return (
             <>
-              <div className=" px-6 py-2 ">{i}</div>
+              <div key={i} className=" px-6 py-2 ">
+                {i}
+              </div>
 
-              {index < content.length - 1 && <Divider />}
+              {index < content.length - 1 && <Divider key={index} />}
             </>
           );
         })}
