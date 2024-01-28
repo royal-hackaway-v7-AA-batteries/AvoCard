@@ -5,6 +5,7 @@ import ActivityRecord from "./ActivityRecord";
 import currencyLogoDark from "../../public/assets/currency_dark.svg";
 import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
+import ActionButton from "./ActionButton";
 
 const HomeLayout = () => {
   const LOCATION = useLocation();
@@ -21,7 +22,7 @@ const HomeLayout = () => {
               expiration="2028-02-23"
             />
           </div>
-          <div id="account-info">
+          <div className=" relative " id="account-info">
             <div id="balance-data">
               <div id="balance-container">
                 <div>Balance</div>
@@ -49,11 +50,12 @@ const HomeLayout = () => {
                 balanceChange="+13"
               />
             </div>
-            <div id="send-receive">
+            <ActionButton content={["Send", "Recieve"]} />
+            {/* <div id="send-receive">
               <div>Send</div>
               <div>|</div>
               <div>Recieve</div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div id="current-view" className=" relative ">
