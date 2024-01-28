@@ -15,6 +15,7 @@ import {
 } from "firebase/auth";
 
 import { useEffect, useState } from "react";
+import Button from "./components/Button";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFng4SlyrJ33txyWroBuYM5Cyu0ZyQ930",
@@ -106,17 +107,11 @@ function App() {
             element={
               <>
                 {user ? (
-                  <HomeLayout
-                    children={
-                      <button
-                        id="logout"
-                        onClick={handleLogout}
-                        style={{ display: user ? "inline-block" : "none" }}
-                      >
-                        Log Out
-                      </button>
-                    }
-                  />
+                  <HomeLayout>
+                    <Button main center onClick={handleLogout}>
+                      Logout
+                    </Button>
+                  </HomeLayout>
                 ) : (
                   <div className="text-black">test</div>
                 )}

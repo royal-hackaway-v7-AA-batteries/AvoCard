@@ -21,9 +21,8 @@ const HomeLayout = ({
               balance={3700}
               expiration="2028-02-23"
             />
-            {children}
           </div>
-          <AccountDetail />
+          <AccountDetail logOut={children} />
         </div>
         <div id="current-view" className=" relative ">
           <NavBar />
