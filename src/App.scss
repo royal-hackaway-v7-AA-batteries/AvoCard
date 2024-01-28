@@ -1,9 +1,26 @@
 #login-screen {
-    background: green;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
     #left-portion {
-        background: white;
+        background: rgb(18, 188, 94);
+        width: max(40vw, 20rem);
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        & > h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        & > h4 {
+            font-size: 1.2rem;
+            font-style: italic;
+            font-weight: normal;
+        }
     }
 }
 
@@ -13,19 +30,33 @@
     border: .2rem solid black;
     padding: .5rem .8rem;
     background: #CCC;
-    box-shadow: 0 0 .2rem black;
+    // box-shadow: 0 0 .2rem black;
     transition: all .2s ease-in-out;
     &:hover {
         transform: scale(1.1);
     }
+    &:focus {
+        transform: scale(.95);
+    }
 }
 
 #google-login {
-    //
-    background: red;
+    background: white;
     border: none;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row;
+    font-weight: 600;
+    & > div {
+        display: flex;
+        flex-flow: row;
+    }
 }
 
-#logout {
-    //
+#logo {
+    display: inline-block;
+    width: 30vw;
+    height: 30vw;
+    margin: auto;
 }
