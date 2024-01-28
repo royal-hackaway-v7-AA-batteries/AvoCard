@@ -59,7 +59,11 @@ function App() {
 
   function LoginScreen() {
     return (
-      <div id="login-screen" style={{ height: !user ? "100vh" : "0" }}>
+      <div
+        id="login-screen"
+        style={{ height: !user ? "100vh" : "0" }}
+        className="background"
+      >
         <div id="left-portion">
           <h1>Welcome to AvoCard</h1>
           <h4>Let's get started!</h4>
@@ -79,6 +83,9 @@ function App() {
           src={AvoCardLogoDark}
           style={{ display: !user ? "inline-block" : "none" }}
         />
+        {[50].map((k) => {
+          return <span key={k}></span>;
+        })}
       </div>
     );
   }
