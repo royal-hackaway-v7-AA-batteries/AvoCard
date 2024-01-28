@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./HomeLayout.scss";
 import Card from "./Card";
 import ActivityRecord from "./ActivityRecord";
-import currencyLogoDark from "../assets/currency_dark.svg";
+import currencyLogoDark from "../../public/assets/currency_dark.svg";
 import { useLocation } from "react-router-dom";
 
 const HomeLayout = () => {

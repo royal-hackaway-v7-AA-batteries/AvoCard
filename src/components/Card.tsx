@@ -1,6 +1,6 @@
 import "./Card.scss";
-import currencyLogoLight from "../assets/currency_light.svg";
-import AvoCardLogo from "../assets/AvoCard_Logo_light.svg";
+import currencyLogoLight from "../../public/assets/currency_light.svg";
+import AvoCardLogo from "../../public/assets/AvoCard_Logo_light.svg";
 
 function Card({
   name,
