@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./HomeLayout.scss";
 import Card from "./Card";
 import ActivityRecord from "./ActivityRecord";
-import currencyLogo from "../assets/currency.svg";
+import currencyLogoDark from "../assets/currency_dark.svg";
 import { useLocation } from "react-router-dom";
 
 const HomeLayout = () => {
@@ -14,10 +14,10 @@ const HomeLayout = () => {
         <div id="desktop-left">
           <div id="card-container">
             <Card
-              name="Test User"
+              name="Kenny Oliver"
               issuer="Royal Holloway, University of London"
-              balance={1200}
-              expiration="23-02-2028"
+              balance={3700}
+              expiration="2028-02-23"
             />
           </div>
           <div id="account-info">
@@ -25,8 +25,8 @@ const HomeLayout = () => {
               <div id="balance-container">
                 <div>Balance</div>
                 <div>
-                  <img src={currencyLogo} />
-                  {Intl.NumberFormat().format(1200)}
+                  <img src={currencyLogoDark} />
+                  {Intl.NumberFormat().format(3700)}
                 </div>
               </div>
               <div id="upcoming-container">

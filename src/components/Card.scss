@@ -1,4 +1,11 @@
 .card {
+    @keyframes gradient {
+        0%   { background-position: 0% 50%; }
+        25%  { background-position: 100% 50%; }
+        50%  { background-position: 100% 100%; }
+        75%  { background-position: 50% 100%; }
+        100% { background-position: 0% 50%; }
+    }
     border-radius: .8rem;
     padding: .8rem 1.5rem;
     // border: .08rem solid white;
@@ -8,7 +15,23 @@
     margin-bottom: 1rem;
     height: calc(26.7vh * .9);
     width: 100%;
-    background: linear-gradient(230deg, #E57171 0%, #AC87F9 50%, #77F2EB 100%);
+    // background: linear-gradient(230deg, #E57171 0%, #AC87F9 50%, #77F2EB 100%);
+    background-color:hsla(0,100%,50%,1);
+    background-color:#ff9c99;
+    background-image:
+        radial-gradient(at 3% 18%, hsla(26,62%,68%,0.29) 0px, transparent 50%),
+        radial-gradient(at 63% 70%, hsla(303,63%,66%,1) 0px, transparent 50%),
+        radial-gradient(at 30% 34%, hsla(59,63%,67%,1) 0px, transparent 50%),
+        radial-gradient(at 41% 94%, hsla(4,72%,67%,1) 0px, transparent 50%),
+        radial-gradient(at 65% 26%, hsla(26,86%,65%,1) 0px, transparent 50%),
+        radial-gradient(at 95% 92%, hsla(238,94%,68%,0.9) 0px, transparent 50%),
+        radial-gradient(at 9% 97%, hsla(1,81%,62%,1) 0px, transparent 50%),
+        radial-gradient(at 34% 26%, hsla(356,72%,77%,1) 0px, transparent 50%),
+        radial-gradient(at 99% 21%, hsla(274,91%,66%,1) 0px, transparent 50%),
+        radial-gradient(at 3% 56%, hsla(327,69%,77%,1) 0px, transparent 50%),
+        radial-gradient(at 98% 49%, hsla(283,97%,66%,1) 0px, transparent 50%);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
     backdrop-filter: grayscale(1);
     -webkit-backdrop-filter: grayscale(1);
     display: flex;
@@ -21,6 +44,7 @@
         // padding-top: 1rem;
         font-size: 1.2rem;
         text-align: right;
+        text-shadow: 0 0 .3rem white;
     }
     #card-issuer {
         font-size: .7rem;
@@ -36,8 +60,9 @@
     }
     #card-balance {
         font-size: 2rem;
+        text-shadow: 0 0 .3rem white;
         & > img {
-            filter: invert(1);
+            filter: drop-shadow(0 0 .2rem white);
             display: inline-block;
             transform: translateY(-.1rem);
             margin-right: .5rem;

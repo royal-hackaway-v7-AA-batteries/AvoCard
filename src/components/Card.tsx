@@ -1,6 +1,6 @@
 import "./Card.scss";
-import currencyLogo from "../assets/currency.svg";
-import AvoCardLogo from "../assets/AvoCard_Logo_Light.svg";
+import currencyLogoLight from "../assets/currency_light.svg";
+import AvoCardLogo from "../assets/AvoCard_Logo_light.svg";
 
 function Card({
   name,
@@ -22,7 +22,7 @@ function Card({
       <div>
         <div id="card-balance-label">Balance</div>
         <div id="card-balance">
-          <img src={currencyLogo} />
+          <img src={currencyLogoLight} />
           {Intl.NumberFormat().format(balance)}
         </div>
       </div>
