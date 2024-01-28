@@ -57,16 +57,16 @@ function App() {
 
   function LoginScreen() {
     return (
-      <>
-        <button
-          id="google-login"
-          onClick={signInWithGoogle}
-          style={{ display: !user ? "inline-block" : "none" }}
-        >
+      <div
+        id="login-screen"
+        style={{ display: !user ? "inline-block" : "none" }}
+      >
+        <h1 id="greeting">Welcome to AvoCard</h1>
+        <h4 id="">Let's get started!</h4>
+        <button id="google-login" onClick={signInWithGoogle}>
           Sign In With Google
         </button>
-        <div className="text-black">Hello, {user?.displayName}</div>
-      </>
+      </div>
     );
   }
 
@@ -107,7 +107,7 @@ function App() {
             element={
               <>
                 {user ? (
-                  <HomeLayout>
+                  <HomeLayout username={user?.displayName} email={user?.email}>
                     <Button main center onClick={handleLogout}>
                       Logout
                     </Button>

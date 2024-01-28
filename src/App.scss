@@ -1,3 +1,12 @@
+#login-screen {
+    background: green;
+    width: 100vw;
+    height: 100vh;
+    #left-portion {
+        background: white;
+    }
+}
+
 #google-login, #logout {
     color: black;
     border-radius: 2rem;
@@ -13,7 +22,7 @@
 
 #google-login {
     //
-    background: white;
+    background: red;
     border: none;
 }
 

@@ -6,11 +6,13 @@ function Card({
   name,
   issuer,
   balance,
+  email,
   expiration,
 }: {
   name: string;
   issuer: string;
   balance: number;
+  email: string | null;
   expiration: string;
 }) {
   return (
@@ -20,7 +22,7 @@ function Card({
         <div id="card-issuer">Issued by {issuer}</div>
       </div>
       <div>
-        <div id="card-balance-label">Balance</div>
+        <div id="card-balance-label">{email || "Balance"}</div>
         <div id="card-balance">
           <img src={currencyLogoLight} />
           {Intl.NumberFormat().format(balance)}
