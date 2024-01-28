@@ -44,7 +44,7 @@
         // padding-top: 1rem;
         font-size: 1.2rem;
         text-align: right;
-        text-shadow: 0 0 .3rem white;
+        // text-shadow: 0 0 .3rem white;
     }
     #card-issuer {
         font-size: .7rem;
@@ -60,9 +60,9 @@
     }
     #card-balance {
         font-size: 2rem;
-        text-shadow: 0 0 .3rem white;
+        // text-shadow: 0 0 .3rem white;
         & > img {
-            filter: drop-shadow(0 0 .2rem white);
+            // filter: drop-shadow(0 0 .2rem white);
             display: inline-block;
             transform: translateY(-.1rem);
             margin-right: .5rem;

@@ -48,11 +48,11 @@ const MarketProductCard = () => {
   // });
 
   return (
-    <div className=" mb-2 ">
+    <div className=" mb-3 flex break-inside-avoid flex-col gap-2 ">
       <div>
         <img src="https://source.unsplash.com/random/?product" alt="" />
       </div>
-      <div className=" flex w-full ">
+      <div className=" flex w-full justify-between text-sm ">
         <p>{productNames[Math.floor(Math.random() * productNames.length)]}</p>
         <CurrencyValue value={Math.floor(Math.random() * 1000 + 800)} />
       </div>
